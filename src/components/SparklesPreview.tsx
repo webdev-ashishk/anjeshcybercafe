@@ -1,4 +1,5 @@
 "use client";
+import { MovingBorderDemo } from "./ui/MovingBorderDemo";
 import { SparklesCore } from "./ui/sparkles";
 
 export function SparklesPreview() {
@@ -16,7 +17,7 @@ export function SparklesPreview() {
         />
       </div>
       <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-        Build great products
+        Build great products <MovingBorderDemo />
       </h1>
     </div>
   );
