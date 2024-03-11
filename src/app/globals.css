@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.services-items:hover {
+.services-items {
+  display: none;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.services:hover .services-items {
   display: block;
 }

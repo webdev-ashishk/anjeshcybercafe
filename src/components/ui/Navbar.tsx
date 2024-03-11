@@ -9,14 +9,14 @@ export default function Navbar() {
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
-          <ul>
+          <div className="services">
             Services
-            <div id="servicesItems" className="hidden services-items">
+            <ul id="servicesItems" className="services-items rounded-lg mx-3">
               <li>one</li>
               <li>two</li>
               <li>three</li>
-            </div>
-          </ul>
+            </ul>
+          </div>
           <DarkMode />
         </ul>
       </nav>
