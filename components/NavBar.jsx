@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { AiFillYoutube, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { RiComputerFill } from "react-icons/ri";
 import DarkLightSwitch from "./DarkLightSwitcher";
@@ -44,7 +43,7 @@ const NavBar = () => {
           </div>
           <h1 className="sm:hidden lg:block md:block font-bold">
             <button type="button" onClick={() => router.push("/")}>
-              SUMAN
+              Anjesh logo
             </button>
           </h1>
         </div>
@@ -52,39 +51,43 @@ const NavBar = () => {
           <ul className="sm:text-1xl flex gap-7 mx:text-1xl  md:text-3xl md:font-bold mr-8 justify-center items-center ">
             <li>
               <Link
-                href="/courses"
-                className={
-                  currentRoute === "/courses" ? activeStyle : nonActiveStyle
-                }
+                href="/"
+                className={currentRoute === "/" ? activeStyle : nonActiveStyle}
               >
-                courses
+                Home
               </Link>
             </li>
             <li>
               <Link
-                href="/projects"
+                href="/about"
                 className={
-                  currentRoute === "/projects" ? activeStyle : nonActiveStyle
+                  currentRoute === "/about" ? activeStyle : nonActiveStyle
                 }
               >
-                projects
+                About
               </Link>
             </li>
-            <li className="mt-3">
-              <button onClick={handleYoutube}>
-                <AiFillYoutube />
-              </button>
+            <li>
+              <Link
+                href="/contact"
+                className={
+                  currentRoute === "/contact" ? activeStyle : nonActiveStyle
+                }
+              >
+                Contact
+              </Link>
             </li>
-            <li className="mt-3">
-              <button onClick={handleGitHub}>
-                <FaGithub />
-              </button>
+            <li>
+              <Link
+                href="/services"
+                className={
+                  currentRoute === "/services" ? activeStyle : nonActiveStyle
+                }
+              >
+                Services
+              </Link>
             </li>
-            <li className="mt-3">
-              <button onClick={handleLinkedin}>
-                <FaLinkedin />
-              </button>
-            </li>
+
             <li className="text-2xl mt-[2px]">
               <DarkLightSwitch />
             </li>
@@ -96,31 +99,24 @@ const NavBar = () => {
             <ul className="w-full h-screen text-3xl font-bold text-center bg-black text-white">
               <li className="mt-2">
                 <button onClick={toggleMenu}>
-                  <Link href="/courses">courses</Link>
+                  <Link href="/">Home</Link>
                 </button>
               </li>
               <li>
                 <button onClick={toggleMenu}>
-                  <Link href="/projects">projects</Link>
+                  <Link href="/about">About</Link>
                 </button>
               </li>
-              <ul className="flex justify-center gap-5 m-4">
-                <li>
-                  <button onClick={handleYoutube}>
-                    <AiFillYoutube />
-                  </button>
-                </li>
-                <li>
-                  <button onClick={handleGitHub}>
-                    <FaGithub />
-                  </button>
-                </li>
-                <li>
-                  <button onClick={handleLinkedin}>
-                    <FaLinkedin />
-                  </button>
-                </li>
-              </ul>
+              <li>
+                <button onClick={toggleMenu}>
+                  <Link href="/contact">Contact</Link>
+                </button>
+              </li>
+              <li>
+                <button onClick={toggleMenu}>
+                  <Link href="/services">Services</Link>
+                </button>
+              </li>
             </ul>
           </div>
         )}
