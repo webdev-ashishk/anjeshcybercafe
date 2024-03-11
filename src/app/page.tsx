@@ -1,11 +1,9 @@
-import { DarkMode } from "@/components/DarkMode";
 import { SparklesPreview } from "@/components/SparklesPreview";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="relative">
       <SparklesPreview />
-     
     </main>
   );
 }
