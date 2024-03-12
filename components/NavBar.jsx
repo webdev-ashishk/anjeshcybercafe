@@ -2,10 +2,12 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiFillInstagram, AiOutlineMenu } from "react-icons/ai";
+import { ImFacebook2 } from "react-icons/im";
 import { IoMdClose } from "react-icons/io";
-import { RiComputerFill } from "react-icons/ri";
+import { RiComputerFill, RiWhatsappFill } from "react-icons/ri";
 import DarkLightSwitch from "./DarkLightSwitcher";
+
 const NavBar = () => {
   const [showMenu, setMenu] = useState(false);
   function toggleMenu() {
@@ -19,13 +21,13 @@ const NavBar = () => {
   // styles for active and non-active links
   const activeStyle = linkStyle + " text-gray-400";
   const nonActiveStyle = linkStyle + " black";
-  const handleYoutube = () => {
+  const handleFacebook = () => {
     window.open("https://www.youtube.com/@SumanMalakar18/featured", "_blank");
   };
-  const handleGitHub = () => {
+  const handleInstagram = () => {
     window.open("https://github.com/sumanmalakar", "_blank");
   };
-  const handleLinkedin = () => {
+  const handleWhatsapp = () => {
     window.open(
       "https://www.linkedin.com/in/suman-malakar/?originalSubdomain=in",
       "_blank"
@@ -33,8 +35,8 @@ const NavBar = () => {
   };
   return (
     <>
-      <div className="flex justify-between  sticky top-0 border-b border-b-gray-500 shadow-lg">
-        <div className="flex  gap-4 text-5xl m-2 font-bold ">
+      <div className="flex justify-between  sticky top-0 border-b border-b-gray-500 shadow-lg dark:bg-gray-700">
+        <div className="flex  gap-4 text-2xl m-2 font-bold ">
           <button onClick={() => router.push("/")} title="desktop icons">
             <RiComputerFill />
           </button>
@@ -48,7 +50,7 @@ const NavBar = () => {
           </h1>
         </div>
         <nav className=" lg:block md:hidden sm:hidden flex justify-center items-center m-2">
-          <ul className="sm:text-1xl flex gap-7 mx:text-1xl  md:text-3xl md:font-bold mr-8 justify-center items-center ">
+          <ul className="sm:text-1xl flex gap-7 mx:text-1xl  md:text-2xl md:font-bold mr-8 justify-center items-center ">
             <li>
               <Link
                 href="/"
@@ -117,6 +119,23 @@ const NavBar = () => {
                   <Link href="/services">Services</Link>
                 </button>
               </li>
+              <ul className="flex justify-center gap-5 m-4">
+                <li>
+                  <button onClick={handleFacebook}>
+                    <ImFacebook2 />
+                  </button>
+                </li>
+                <li>
+                  <button onClick={handleInstagram}>
+                    <AiFillInstagram />
+                  </button>
+                </li>
+                <li>
+                  <button onClick={handleWhatsapp}>
+                    <RiWhatsappFill />
+                  </button>
+                </li>
+              </ul>
             </ul>
           </div>
         )}

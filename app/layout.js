@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import TestFooter from "@/components/TestFooter";
 import UiContext from "@/components/UiContext";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,7 +18,8 @@ export default function RootLayout({ children }) {
         <UiContext>
           <NavBar />
           <main> {children}</main>
-          <Footer />
+          {/* <Footer /> */}
+          <TestFooter />
         </UiContext>
       </body>
     </html>

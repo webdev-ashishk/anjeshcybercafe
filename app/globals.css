@@ -39,11 +39,6 @@ body {
   min-height: 100vh; /* Ensures that the body takes up at least the full height of the viewport. */
   box-sizing: inherit;
 }
-.footer {
-  font-size: 18px;
-  text-align: center;
-  margin-top: auto; /* Push the footer to the bottom */
-}
 
 .light {
   color: black;
@@ -57,7 +52,7 @@ body {
 
 /* styles/scrollbar.css */
 
-/* Track */
+/* Track
 ::-webkit-scrollbar {
   width: 4px;
   border-radius: 60px;
@@ -69,17 +64,35 @@ body {
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   /* background-color: #888; */
 
-  border-radius: 6px; /* Optional: Add border-radius for rounded corners */
-}
+/* border-radius: 6px; Optional: Add border-radius for rounded corners */
+/* } */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(
     to right,
     rgba(255, 192, 203, 0.473),
     rgba(0, 0, 255, 0.416)
   );
+} */
+.footer {
+  font-size: 18px;
+  text-align: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footerWidth {
+  width: 200px;
+  height: 200px;
+  padding: 100px;
+  margin: 10px;
+  background-color: beige;
+}
+.lastDiv {
+  height: 100px;
+  margin: auto;
+  background-color: beige;
 }
