@@ -8,7 +8,9 @@
 > 1. sitemap.xml
 > 2. robots.txt
 > 3. open graph
-> 4. title
+> 4. canonical tags
+> 5. Error handling 404 page
+> 6. sitemap.html
 
 # Tasks
 
